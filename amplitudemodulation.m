@@ -1,0 +1,20 @@
+ac=1; 
+fc=0.5; 
+Am=1;
+fm=0.05;
+fs=100;
+ka=1.5;
+t=[0:0.1:50];
+ct=ac*cos(2*pi*fc*t);
+mt=Am*cos(2*pi*fm*t);
+AM=ct.*(1+ka*mt);
+subplot(3,1,1);
+plot(mt);
+ylabel('message signal');
+subplot(3,1,2);
+plot(ct);
+ylabel('carrier signal');
+subplot(3,1,3);
+plot(AM);
+ylabel('AM signal');
+
